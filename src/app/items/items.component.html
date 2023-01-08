@@ -1,6 +1,6 @@
 <div class="row">
   <div class="row row-cols-1 row-cols-md-3 g-4 mx-auto" >
-    <div class="col" *ngFor="let item of itemsList">
+    <div class="col" *ngFor="let item of itemsList;let i = index">
       <div class="card h-100">
         <img src="{{ item.pic }}" class="card-img-top mx-auto"  />
         <div class="card-body">
@@ -11,6 +11,7 @@
           <small class="text-muted">price: {{ item.price }}$</small>
         </div>
         <button class="btn btn-primary">add to Cart</button>
+        <button type="" (click)="onCounter(item)">counter{{item.counter}}</button>
       </div>
     </div>
   </div>
